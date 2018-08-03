@@ -1,0 +1,4 @@
+<div *ngFor="let dir of directories">
+  <div *ngIf="checkFolder(dir);" (click)="onClikFolder()">{{dir}}</div>
+  <app-recursive [directories]="dir" *ngIf="!checkFolder(dir)"></app-recursive>
+</div>
